@@ -31,8 +31,12 @@ S3 is used for dataset storage (as CSVs). A training dataset is saved in S3 for 
 ### Lambda Function
 A lambda function is created that is automatically triggered to process CSVs when a new file is uploaded to a certain S3 bucket.
 
+![lambda](https://github.com/tongkevn/MSDS-434-BankMarketingProject/blob/622e9a2134080386bd53724bccecb531d3148085/lambdafunction.png)
+
 ### Cloudwatch
 Cloudwatch is leveraged to monitor traffic and usage of the lambda function.
+
+![cloudwatch screenshot](https://github.com/tongkevn/MSDS-434-BankMarketingProject/blob/504f2f9aa5f367595388e732556a6dec7f441c32/cloudwatch.png)
 
 ## Google Colab
 As an alternative to AWS Sagemaker, which can be cost prohibitive, Google Colab is leveraged to develop a Pytorch machine learning model, run predictions on a sample dataset, and subsequently upload to S3. The problem is set up as a binary classification model, which is predicting a conversion (“1”) or not (“0”)
@@ -46,5 +50,6 @@ To simulate a real world situation the workflow is designed as follows:
 1. Google Colab will read a training CSV hosted in S3 and generate a Pytorch model. The model achieves ~95% accuracy.
 2. An unseen dataset is then loaded from S3 into Google Colab for the model to make predictions. An additional column is added to the dataset that notes a conversion or not.
 3. Google Colab will then upload a CSV version of the dataset to an S3 bucket.
-4. Once a CSV is uploaded, an AWS Lambda function is automatically triggered. The function will concatenate all the CSVs in the bucket, and upload to a third bucket. AWS Cloudwatch visualizations are utilized for Lambda function monitoring and usage.
-5. Tableau will read the combine CSV, and is then leveraged for end user visualizations and summary statistics tables to gain Bank Marketing campaign insights.
+4. Once a CSV is uploaded, an AWS Lambda function is automatically triggered. The function will concatenate all the CSVs in the bucket, and upload to a third bucket.
+5. AWS Cloudwatch visualizations are utilized for Lambda function monitoring and usage.
+6. Tableau will read the combine CSV, and is then leveraged for end user visualizations and summary statistics tables to gain Bank Marketing campaign insights.
