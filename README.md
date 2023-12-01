@@ -7,6 +7,8 @@ This project focuses on leveraging machine learning and cloud applications to pr
 
 [Click Here to Access Tableau Public Link](https://public.tableau.com/app/profile/kevin.tong7552/viz/MSDS434BankMarketingFinalProject/Dashboard1?publish=yes)
 
+[Click Here for Video Demonstration](https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb214a73-4a7f-469c-9724-b0ca00326f2a)
+
 # Table of Contents
 1. About the Dataset
 2. Technologies Used
