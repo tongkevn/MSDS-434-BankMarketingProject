@@ -5,9 +5,7 @@ This project focuses on leveraging machine learning and cloud applications to pr
 
 [Click Here to Preview Google Colab Notebook](https://colab.research.google.com/drive/1J3LGfd6ayPH37g5g3Xr_0oOvSThFm1Lb#scrollTo=WhCj0XnvYgQ8)
 
-Tableau Public Link:
-
-(Add in Tableau chart)
+[Click Here to Access Tableau Public Link](https://public.tableau.com/app/profile/kevin.tong7552/viz/MSDS434BankMarketingFinalProject/Dashboard1?publish=yes)
 
 # Table of Contents
 1. About the Dataset
