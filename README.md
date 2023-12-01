@@ -45,9 +45,10 @@ Results from the machine learning model are visualized to the end user with Tabl
 # Workflow
 To simulate a real world situation the workflow is designed as follows:
 
-1. Google Colab will read a training CSV hosted in S3 and generate a Pytorch model. The model achieves ~95% accuracy.
-2. An unseen dataset is then loaded from S3 into Google Colab for the model to make predictions. An additional column is added to the dataset that notes a conversion or not.
-3. Google Colab will then upload a CSV version of the dataset to an S3 bucket.
-4. Once a CSV is uploaded, an AWS Lambda function is automatically triggered. The function will concatenate all the CSVs in the bucket, and upload to a third bucket.
-5. AWS Cloudwatch visualizations are utilized for Lambda function monitoring and usage.
-6. Tableau will read the combine CSV, and is then leveraged for end user visualizations and summary statistics tables to gain Bank Marketing campaign insights.
+1. Training data and data for model to make predictions on are uploaded to S3 bucket
+2. Google Colab will read a training CSV hosted in S3 and generate a Pytorch model. The model achieves ~95% accuracy.
+3. An unseen dataset is then loaded from S3 into Google Colab for the model to make predictions. An additional column is added to the dataset that notes a conversion or not.
+4. Google Colab will then upload a CSV version of the dataset to an S3 bucket.
+5. Once a CSV is uploaded, an AWS Lambda function is automatically triggered. The function will concatenate all the CSVs in the bucket, and upload to a third bucket.
+6. AWS Cloudwatch visualizations are utilized for Lambda function monitoring and usage.
+7. Tableau will read the combine CSV, and is then leveraged for end user visualizations and summary statistics tables to gain Bank Marketing campaign insights.
