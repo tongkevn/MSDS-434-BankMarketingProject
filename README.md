@@ -9,7 +9,7 @@ This project focuses on leveraging machine learning and cloud applications to pr
 
 [Click Here for Video Demonstration](https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb214a73-4a7f-469c-9724-b0ca00326f2a)
 
-Note: There are many ways to deploy a lambda function, whether it is through the console or SAM. The lambda-python 3.7 folder contains the necessary files to deploy via SAM, though in my project I leverage a previously deployed version of the lambda function via the AWS console.
+Note: There are many ways to deploy a lambda function, whether it is through the console or SAM. The lambda-python 3.7 folder contains the necessary files to deploy via SAM, though in my project I leverage a previously deployed version of the lambda function via the AWS console, because pandas and the necessary S3 triggers were already implemented.
 
 # Table of Contents
 1. About the Dataset
